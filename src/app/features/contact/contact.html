@@ -1,0 +1,29 @@
+<section class="contact-section">
+    <div class="container">
+        <h2 class="section-title">Conéctate Conmigo</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="label">Email</span>
+                    <a href="mailto:{{ config.email }}">{{ config.email }}</a>
+                </div>
+                <div class="contact-item">
+                    <span class="label">LinkedIn</span>
+                    <a [href]="config.linkedin" target="_blank">{{ config.linkedin }}</a>
+                </div>
+                <div class="contact-item">
+                    <span class="label">GitHub</span>
+                    <a [href]="config.github" target="_blank">{{ config.github }}</a>
+                </div>
+            </div>
+            <div class="contact-cta">
+                <button class="btn btn-primary" (click)="downloadCV()">
+                    Descargar CV Completo
+                </button>
+                <p class="cta-text">
+                    ¿Trabajamos juntos? Estoy abierto a oportunidades en arquitectura y desarrollo full stack.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

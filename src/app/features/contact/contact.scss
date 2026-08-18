@@ -1,0 +1,93 @@
+.contact-section {
+    padding: 4rem 2rem;
+    background: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    margin-bottom: 2rem;
+}
+
+.label {
+    display: block;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 0.25rem;
+}
+
+.contact-item a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.contact-cta {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #3b82f6;
+    color: white;
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+.cta-text {
+    margin-top: 1.5rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}

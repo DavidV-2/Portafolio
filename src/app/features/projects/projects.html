@@ -1,0 +1,24 @@
+<section class="projects-section">
+    <div class="container">
+        <h2 class="section-title">Proyectos Destacados</h2>
+        <div class="projects-grid">
+            <div class="project-card" *ngFor="let project of projects">
+                <div class="card-header">
+                    <h3>{{ project.name }}</h3>
+                </div>
+                <div class="card-body">
+                    <p class="problem"><strong>Problema:</strong> {{ project.problem }}</p>
+                    <p class="solution"><strong>Solución:</strong> {{ project.solution }}</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag" *ngFor="let tech of project.technologies">{{ tech }}</span>
+                    </div>
+                    <div class="card-footer">
+                        <a [href]="project.github" target="_blank" class="github-link">
+                            Ver en GitHub →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

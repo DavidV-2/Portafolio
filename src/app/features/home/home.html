@@ -1,0 +1,27 @@
+<section class="hero">
+    <div class="hero-content">
+        <h1>{{ config.name }}</h1>
+        <h2>{{ config.title }}</h2>
+        <p class="tagline">Constructing scalable, maintainable, and secure software architecture.</p>
+        <div class="cta-group">
+            <a routerLink="/projects" class="btn btn-primary">View Projects</a>
+            <a href="javascript:void(0)" (click)="downloadCV()" class="btn btn-outline">Download CV</a>
+            <a routerLink="/contact" class="btn btn-outline">Contact Me</a>
+        </div>
+    </div>
+    <div class="hero-visual">
+        <div class="architecture-diagram">
+            <div class="layer">Angular</div>
+            <div class="arrow">↓</div>
+            <div class="layer">Presentation</div>
+            <div class="arrow">↓</div>
+            <div class="layer">Application</div>
+            <div class="arrow">↓</div>
+            <div class="layer">Domain</div>
+            <div class="arrow">↓</div>
+            <div class="layer">Infrastructure</div>
+            <div class="arrow">↓</div>
+            <div class="layer split">API &nbsp;&nbsp; Database</div>
+        </div>
+    </div>
+</section>

@@ -1,12 +1,18 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { AppConfig } from './core/config/app.config';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+  standalone: true,
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  templateUrl: './app.html'
 })
 export class App {
-  protected readonly title = signal('david-velez-portfolio');
+  config = AppConfig;
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 }

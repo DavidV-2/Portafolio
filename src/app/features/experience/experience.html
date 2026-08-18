@@ -1,0 +1,25 @@
+<section class="experience-section">
+    <div class="container">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="experience-list">
+            <div class="experience-item" *ngFor="let exp of experiences">
+                <div class="exp-header">
+                    <h3>{{ exp.role }}</h3>
+                    <div class="exp-meta">
+                        <span class="company">{{ exp.company }}</span>
+                        <span class="period">• {{ exp.period }}</span>
+                        <span class="location">• {{ exp.location }}</span>
+                    </div>
+                </div>
+                <div class="exp-body">
+                    <ul class="exp-details">
+                        <li *ngFor="let detail of exp.description">{{ detail }}</li>
+                    </ul>
+                    <div class="tech-tags">
+                        <span class="tech-tag" *ngFor="let tech of exp.technologies">{{ tech }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
