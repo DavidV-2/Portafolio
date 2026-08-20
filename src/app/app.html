@@ -1,16 +1,14 @@
 <nav class="navbar">
   <div class="nav-container">
-    <a routerLink="/" class="brand">
-      {{ config.name }}
-    </a>
+    <a routerLink="/" class="brand"> {{ config.name }} </a>
     <button class="menu-toggle" (click)="toggleMenu()">☰</button>
     <ul class="nav-links" [class.open]="menuOpen">
-      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a></li>
-      <li><a routerLink="/experience" routerLinkActive="active">Experiencia</a></li>
-      <li><a routerLink="/projects" routerLinkActive="active">Proyectos</a></li>
-      <li><a routerLink="/engineering" routerLinkActive="active">Arquitectura</a></li>
-      <li><a routerLink="/skills" routerLinkActive="active">Habilidades</a></li>
-      <li><a routerLink="/contact" routerLinkActive="active">Contacto</a></li>
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+      <li><a routerLink="/experience" routerLinkActive="active">Experience</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+      <li><a routerLink="/engineering" routerLinkActive="active">Engineering</a></li>
+      <li><a routerLink="/skills" routerLinkActive="active">Skills</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -18,7 +16,7 @@
   <router-outlet></router-outlet>
 </main>
 <footer class="footer">
-  <p>© 2026 {{ config.name }} • Full Stack .NET Developer</p>
+  <p>© 2026 {{ config.name }} &nbsp;•&nbsp; Full Stack .NET Developer &nbsp;•&nbsp; ASP.NET Core &nbsp;•&nbsp; Angular &nbsp;•&nbsp; REST APIs</p>
   <div class="social-links">
     <a href="{{ config.linkedin }}" target="_blank">LinkedIn</a>
     <a href="{{ config.github }}" target="_blank">GitHub</a>
