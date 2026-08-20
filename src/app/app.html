@@ -1,6 +1,6 @@
 <nav class="navbar">
   <div class="nav-container">
-    <a routerLink="/" class="brand"> {{ config.name }} </a>
+    <a routerLink="/" class="brand">{{ config.name }}</a>
     <button class="menu-toggle" (click)="toggleMenu()">☰</button>
     <ul class="nav-links" [class.open]="menuOpen">
       <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
@@ -12,13 +12,14 @@
     </ul>
   </div>
 </nav>
+
 <main class="main-content">
   <router-outlet></router-outlet>
 </main>
+
 <footer class="footer">
-  <p>© 2026 {{ config.name }} &nbsp;•&nbsp; Full Stack .NET Developer &nbsp;•&nbsp; ASP.NET Core &nbsp;•&nbsp; Angular &nbsp;•&nbsp; REST APIs</p>
-  <div class="social-links">
-    <a href="{{ config.linkedin }}" target="_blank">LinkedIn</a>
-    <a href="{{ config.github }}" target="_blank">GitHub</a>
+  <div class="footer-container">
+    <p>© 2026 {{ config.name }} &nbsp;•&nbsp; Full Stack .NET Developer &nbsp;•&nbsp; ASP.NET Core &nbsp;•&nbsp; Angular &nbsp;•&nbsp; REST APIs</p>
+    
   </div>
 </footer>

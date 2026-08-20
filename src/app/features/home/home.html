@@ -1,17 +1,23 @@
-<section class="hero">
-
+<section class="hero-container">
+  <div class="hero">
     <div class="person-image">
-        <img src="images/hero.jpg">
+      <img src="images/hero.jpg" [alt]="config.name">
     </div>
     
     <div class="hero-content">
-        <h1>{{ config.name }}</h1>
-        <h2>{{ config.title }}</h2>
-        <p class="tagline">Constructing scalable, maintainable, and secure software architecture.</p>
-        <div class="cta-group">
-            <a routerLink="/projects" class="btn btn-primary">View Projects</a>
-            <a href="javascript:void(0)" (click)="downloadCV()" class="btn btn-outline">Download CV</a>
-            <a routerLink="/contact" class="btn btn-outline">Contact Me</a>
-        </div>
-    </div>    
+      <h1>{{ config.name }}</h1>
+      <h2>{{ config.title }}</h2>
+      <p class="tagline">Constructing scalable, maintainable, and secure software architecture.</p>
+      
+      <div class="cta-group">
+        <a routerLink="/projects" class="btn btn-primary">View Projects</a>
+        <a [href]="config.linkedin" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">
+          LinkedIn
+        </a>
+        <a [href]="config.github" target="_blank" rel="noopener noreferrer" class="btn btn-github">
+          GitHub
+        </a>
+      </div>
+    </div> 
+  </div>
 </section>

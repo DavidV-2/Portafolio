@@ -1,16 +1,52 @@
+/* ==========================================================
+   1. RESET GLOBAL Y BOX MODEL
+   ========================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html, body {
-    width: 100%;
+
+/* ==========================================================
+   2. ESTRUCTURA Y FONDO GLOBAL
+   ========================================================== */
+html {
     height: 100%;
+}
+
+body {
+    min-height: 100vh;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Evita scroll horizontal */
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+    /* Degradado equilibrado (30% - 40% de opacidad para no tapar la imagen) */
+    background-image: 
+        linear-gradient(
+            rgba(248, 250, 252, 0.35), 
+            rgba(248, 250, 252, 0.45)
+        ), 
+        url('/images/background-home.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-body::-webkit-scrollbar {
-    display: none;
+
+/* ==========================================================
+   3. LAYOUT FLEXIBLE (EVITA OVERFLOW INNECESARIO)
+   ========================================================== */
+app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: transparent !important;
+}
+
+/* Permite que las vistas hereden la transparencia del fondo */
+main, 
+.page-container, 
+section {
+    background-color: transparent !important;
 }

@@ -1,32 +1,75 @@
+/* ==========================================================
+   CONTENEDOR Y ESTRUCTURA HERO
+   ========================================================== */
+.hero-container {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    margin: 1.5rem auto;
+    overflow: hidden;
+}
+
 .hero {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 2rem 1rem;
+    grid-template-columns: 280px 1fr;
+    gap: 2.5rem;
+    padding: 3rem 2.5rem;
     max-width: 1200px;
     margin: 0 auto;
-    min-height: auto;
     align-items: center;
 }
 
+/* ==========================================================
+   FOTO DE PERFIL
+   ========================================================== */
+.person-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.person-image img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid rgba(96, 165, 250, 0.5);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+/* ==========================================================
+   TEXTOS (Modo Oscuro con Alto Contraste)
+   ========================================================== */
 .hero-content h1 {
     font-size: 2.8rem;
-    font-weight: 700;
-    color: #1e293b;
+    font-weight: 800;
+    color: #f8fafc; /* Blanco de alto contraste */
     margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
 }
 
 .hero-content h2 {
-    font-size: 1.5rem;
-    color: #3b82f6;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: #60a5fa; /* Azul brillante */
+    font-weight: 600;
+    margin-bottom: 1.25rem;
 }
 
 .tagline {
-    font-size: 1.2rem;
-    color: #64748b;
+    font-size: 1.15rem;
+    color: #cbd5e1; /* Gris claro legible */
+    line-height: 1.6;
+    margin-bottom: 2rem;
 }
 
+/* ==========================================================
+   BOTONES DE ACCIÓN (CTA)
+   ========================================================== */
 .cta-group {
     display: flex;
     gap: 1rem;
@@ -34,63 +77,84 @@
 }
 
 .btn {
-    padding: 0.6rem 1.4rem;
+    padding: 0.7rem 1.5rem;
     border-radius: 0.5rem;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 0.95rem;
     text-decoration: none;
-}
-
-.btn-primary {
-    background: #3b82f6;
-    color: white;
-}
-
-.btn-outline {
-    border: 2px solid #3b82f6;
-    color: #3b82f6;
-}
-.person-image {
-    display: flex;
-    justify-content: center;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    display: inline-flex;
     align-items: center;
-    width: 100%;
-    max-width: 280px;
-    margin: 0 auto;
+    justify-content: center;
 }
 
-.person-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    object-fit: cover;
-    aspect-ratio: 1/1;
-}
-.layer {
-    background: #1e293b;
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    border-left: 4px solid #3b82f6;
-    margin: 0.25rem 0;
+/* Botón Principal (Proyectos) */
+.btn-primary {
+    background: #2563eb;
+    color: #ffffff !important;
+    border: 1px solid #3b82f6;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
 }
 
-.arrow {
-    color: #64748b;
-    font-size: 1.2rem;
+.btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
 }
 
-.split {
-    display: flex;
-    justify-content: space-around;
+/* Botón LinkedIn */
+.btn-linkedin {
+    background: rgba(10, 102, 194, 0.2);
+    border: 1px solid #0a66c2;
+    color: #38bdf8 !important;
 }
 
+.btn-linkedin:hover {
+    background: #0a66c2;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(10, 102, 194, 0.5);
+}
+
+/* Botón GitHub */
+.btn-github {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(203, 213, 225, 0.3);
+    color: #f1f5f9 !important;
+}
+
+.btn-github:hover {
+    background: #334155;
+    border-color: #94a3b8;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(51, 65, 85, 0.5);
+}
+
+/* ==========================================================
+   RESPONSIVE (Móviles)
+   ========================================================== */
 @media (max-width: 768px) {
     .hero {
         grid-template-columns: 1fr;
-        padding: 2rem 1rem;
+        padding: 2rem 1.5rem;
+        text-align: center;
     }
 
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .cta-group {
+        justify-content: center;
+    }
+
+    .person-image img {
+        max-width: 180px;
     }
 }
