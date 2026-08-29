@@ -16,14 +16,33 @@
                     <a [href]="config.github" target="_blank">{{ config.github }}</a>
                 </div>
             </div>
+            
             <div class="contact-cta">
-                <button class="btn btn-primary" (click)="downloadCV()">
+                
+                <button class="btn btn-primary" (click)="openScriptModal()">
+                    Send your CV by email
+                </button>
+                <button class="btn btn-secondary" (click)="downloadCV()">
                     Download Full CV
                 </button>
+
                 <p class="cta-text">
                     Are we a good fit for each other? I'm open to opportunities in architecture and full-stack development.
                 </p>
             </div>
+        </div>
+    </div>
+
+    <div class="modal-backdrop" *ngIf="showScriptModal" (click)="closeScriptModal()">
+        <div class="modal-card" (click)="$event.stopPropagation()">
+            <button class="close-btn" (click)="closeScriptModal()">&times;</button>
+            <iframe 
+                [src]="scriptUrlSafe" 
+                frameborder="0" 
+                width="100%" 
+                height="450px"
+                allow="autoplay">
+            </iframe>
         </div>
     </div>
 </section>

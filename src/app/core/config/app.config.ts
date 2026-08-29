@@ -4,11 +4,11 @@ export const AppConfig = {
     email: 'd.velezcorrea1999@gmail.com',
     linkedin: 'https://linkedin.com/in/davidevelezg',
     github: 'https://github.com/DavidV-2',
-    cvFileId: '1o8N6wEcv-UvaJIfYoE664vLunLCBMKmF', // Configurable
+    cvFileId: '1te5ByGp788KX1dtbkzhXkBw_5Shn-cRw',
+    scriptAppUrl: 'https://script.google.com/macros/s/AKfycbz45AgOkmZ7twr8kPoYH2qJRtcfoH1aHW8EF0PSLMTzFPtkI6s2WUkljemrnru7JmLB/exec',
     cvDownloadUrl: 'https://drive.google.com/uc?export=download&id=',
 
-    
     getCvUrl: function () {
         return this.cvDownloadUrl + this.cvFileId;
     }
-}
+};

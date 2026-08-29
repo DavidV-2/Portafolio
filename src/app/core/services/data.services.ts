@@ -39,27 +39,27 @@ const experienceData = [
       "Co-developed automated reporting tools for consolidated financial data across international offices.",
       "Executed evolutionary maintenance and production bug fixes to ensure operational stability of internal corporate modules."
     ],
-    "technologies": ["Java",".NET", "ASP.NET Core","Spring Boot", "Angular", "SQL Server", "TypeScript"]
+    "technologies": ["Java", ".NET", "ASP.NET Core", "Spring Boot", "Angular", "SQL Server", "TypeScript"]
   }
 ];
 
 const projectsData = [
   {
-    "name": "Sistema de Integración Legal EFSP/ECF 5",
-    "description": "Plataforma de integración con Tyler Technologies para procesamiento de documentos legales.",
-    "problem": "Sistemas legacy sin capacidad de interoperar con estándares modernos.",
-    "solution": "Arquitectura en capas con .NET Core, integración SOAP/XML y mapeo automático.",
-    "technologies": [".NET 8", "ASP.NET Core", "SQL Server", "Docker", "Blazor"],
-    "github": "https://github.com/davidevelezg/legal-integration-system"
+    "name": "Solidarity Grid",
+    "description": "Distributed payment processing platform based on Payment Mesh.",
+    "problem": "Payment systems dependent on central coordinators or external messaging prone to failures.",
+    "solution": "Decentralized architecture between nodes with task recovery and single transaction processing.",
+    "technologies": [".NET 8", "SQL Server", "Docker", "C#"],
+    "github": "https://github.com/DavidV-2/SolidarityGrid"
   },
   {
-    "name": "App Móvil Corporativa — Flutter",
-    "description": "Migración de aplicación móvil Android nativa a Flutter.",
-    "problem": "Código base fragmentado en múltiples subprocesos (logística, inventarios, administración).",
-    "solution": "Arquitectura modular en Flutter con integración de hardware (handhelds).",
-    "technologies": ["Flutter", "Dart", "REST APIs", "SQL Server"],
-    "github": "https://github.com/davidevelezg/corporate-mobile-flutter"
-  }
+  "name": "OEFA Document Scraper",
+  "description": "Automated scraper and bulk downloader of PDF documents.",
+  "problem": "Inefficient manual extraction of regulatory publications and accompanying documents.",
+  "solution": "Scraping engine under Clean Architecture with concurrent file download.",
+  "technologies": ["TypeScript", "Node.js", "Clean Architecture"],
+  "github": "https://github.com/DavidV-2/Scraping"
+}
 ];
 
 const skillsData = {
