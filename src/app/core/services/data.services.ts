@@ -5,29 +5,41 @@ import { AppConfig } from '../config/app.config';
 const experienceData = [
   {
     "company": "Civil Group / BEST WAY NETWORK",
-    "role": "Developer .NET Full Stack",
-    "period": "Julio 2025 – Mayo 2026",
-    "location": "Remoto",
+    "role": "Full-Stack .NET Developer",
+    "period": "July 2025 – May 2026 | Remote",
+    "Project": "Enterprise-level electronic court filing (e-filing) system for U.S. courts",
     "description": [
-      "Lideré integración end-to-end con Tyler Technologies bajo especificación EFSP/ECF 5, alcanzando 80–90% de efectividad en certificación.",
-      "Reduje el tiempo de mantenimiento del backend en 80% aplicando SOLID y separación de responsabilidades.",
-      "Diseñé controladores especializados para paseo de esquemas XML hacia SQL Server.",
-      "Migré aplicación móvil corporativa de Java (Android Studio) a Flutter.",
-      "Desplegué APIs REST en .NET para extraer lógica de negocio de sistemas legacy en Visual Basic."
+      "Led end-to-end integration with Tyler Technologies under EFSP/ECF 5, tokenizing payments via Chase Paymentech and serializing digitally signed SOAP/XML messages.",
+      "Engineered specialized drivers for parsing XML schemas and mapping them automatically to relational structures in SQL Server.",
+      "Optimized backend maintainability by 80% using SOLID principles, separation of concerns, and managing database migrations with FactoryContext.",
+      "Built dynamic Blazor (BitBlazor) interfaces and reduced client-side error diagnosis time by 80% via browser debugging tool workflows."
     ],
-    "technologies": [".NET 8", "ASP.NET Core", "Blazor", "SQL Server", "Flutter", "Docker", "Git"]
+    "technologies": [".NET", "ASP.NET Core", "BitBlazor", "SQL Server", "Git", "Entity Framework Core", "SOAP/XML", "Chase Paymentech", "EFSP/ECF 5"]
   },
   {
-    "company": "Gastronomia Italiana en Colombia S.A",
-    "role": "Intern Developer (Full-Stack)",
-    "period": "Febrero 2024 – Agosto 2024",
-    "location": "Remoto",
+    "company": "Corsan Metal Industries S.A.S.",
+    "role": "Full-Stack & Mobile Developer",
+    "period": "November 2024 – June 2025 | In-person",
+    "Project": "SPIC Corporate Ecosystem (Logistics, Production, and Mobile Operations)",
     "description": [
-      "Reduje tiempos de procesamiento de ingesta de datos en 80% con Spring Boot, Angular y SQL Server.",
-      "Co-desarrollé herramientas de generación automatizada de reportes contables consolidados.",
-      "Ejecuté mantenimiento evolutivo y corrección de fallos en producción."
+      "Led the strategic transition and migration of the native mobile app from Java (Android Studio) to Flutter, unifying codebase modules across logistics, inventory, and admin.",
+      "Designed and deployed .NET REST APIs to securely extract business logic from legacy Visual Basic systems without interrupting plant operations.",
+      "Integrated handheld scanning hardware for automated barcode/ticket processing, eliminating manual data entry errors and maintaining legacy stability.",
+      "Served as direct technical liaison to map complex manual plant-floor operations into digital desktop and mobile workflows."
     ],
-    "technologies": ["Spring Boot", "Angular", "SQL Server"]
+    "technologies": ["Flutter", "Dart", ".NET Core", "REST APIs", "SQL Server", "Git"]
+  },
+  {
+    "company": "Italian Gastronomy in Colombia, Inc.",
+    "role": "Software Development Intern (Full-Stack)",
+    "period": "February 2024 – August 2024 | Remote",
+    "Project": "Internal Enterprise Applications & Data Processing Systems",
+    "description": [
+      "Designed automation pipelines for data file transformation and bulk ingestion, reducing processing times by 80%.",
+      "Co-developed automated reporting tools for consolidated financial data across international offices.",
+      "Executed evolutionary maintenance and production bug fixes to ensure operational stability of internal corporate modules."
+    ],
+    "technologies": ["Java",".NET", "ASP.NET Core","Spring Boot", "Angular", "SQL Server", "TypeScript"]
   }
 ];
 
@@ -63,7 +75,7 @@ const skillsData = {
   providedIn: 'root'
 })
 export class DataService {
-  constructor() {}
+  constructor() { }
 
   getExperience() { return experienceData; }
   getProjects() { return projectsData; }

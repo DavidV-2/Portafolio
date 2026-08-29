@@ -1,6 +1,6 @@
 export const AppConfig = {
-    name: 'David Estiven Vélez González',
-    title: 'Full-Stack Developer specializing in the Microsoft ecosystem,',
+    name: 'David Estiven Velez Gonzalez',
+    title: 'Full Stack .NET Developer | Enterprise Application Modernization',
     email: 'd.velezcorrea1999@gmail.com',
     linkedin: 'https://linkedin.com/in/davidevelezg',
     github: 'https://github.com/DavidV-2',

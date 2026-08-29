@@ -1,32 +1,38 @@
 <section class="experience-section">
   <div class="container">
     <h2 class="section-title">Professional Experience</h2>
-    
-    <div class="experience-grid">
-      <div class="experience-card" *ngFor="let exp of experiences">
-        <div class="card-top">
-          <div class="exp-header">
-            <h3>{{ exp.role }}</h3>
+
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev-btn" (click)="scrollCarousel(-1)" aria-label="Previous">
+        &#10094;
+      </button>
+
+      <div class="experience-carousel" #carousel>
+        <div class="experience-card" *ngFor="let exp of experiences">
+          <div class="card-top">
+            <div class="exp-header">
+              <h3>{{ exp.role }}</h3>
+            </div>
             <div class="exp-meta">
               <span class="company">{{ exp.company }}</span>
-              <span class="period">• {{ exp.period }}</span>
-              <span class="location">• {{ exp.location }}</span>
+              <span class="period">{{ exp.period }}</span>
+              <span class="Project">{{ exp.Project }}</span>
             </div>
-          </div>
-          
-          <div class="exp-body">
             <ul class="exp-details">
-              <li *ngFor="let detail of exp.description">{{ detail }}</li>
+              <li *ngFor="let item of exp.description">{{ item }}</li>
             </ul>
           </div>
-        </div>
-
-        <div class="exp-footer">
-          <div class="tech-tags">
-            <span class="tech-tag" *ngFor="let tech of exp.technologies">{{ tech }}</span>
+          <div class="exp-footer">
+            <div class="tech-tags">
+              <span class="tech-tag" *ngFor="let tech of exp.technologies">{{ tech }}</span>
+            </div>
           </div>
         </div>
       </div>
+
+      <button class="carousel-btn next-btn" (click)="scrollCarousel(1)" aria-label="Next">
+        &#10095;
+      </button>
     </div>
   </div>
 </section>
