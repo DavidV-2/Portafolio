@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AppConfig } from '../../core/config/app.config';
 import { DataService } from '../../core/services/data.services';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-home.ts',
-  imports: [],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
