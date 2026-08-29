@@ -2,15 +2,6 @@
   command = "npm run build"
   publish = "dist/david-velez-portfolio"
 
-[build.environment]
-  NODE_VERSION = "20"
-
-# Desactiva la redirección automática del plugin para tomar el control directo
-[[plugins]]
-  package = "@netlify/angular-runtime"
-  [plugins.inputs]
-    publish = "dist/david-velez-portfolio"
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
